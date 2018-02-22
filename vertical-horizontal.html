@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直水平居中</title>
+</head>
+<style>
+    /*方法1*/
+    .box{
+        width: 400px;
+        height: 400px;
+        background-color: sandybrown;
+        text-align: center;
+    }
+    .box img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    /*方法2*/
+    .box-2{
+        width: 400px;
+        height: 400px;
+        vertical-align: middle;
+        background-color: sandybrown;
+        text-align:center;
+        /*display:table-cell;*/
+    }
+    /*方法3*/
+    .box-3{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: sandybrown;
+
+    }
+    .box-3 img{
+        position: absolute;
+        margin: auto;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+    }
+    /*方法4*/
+
+    .box-4{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: sandybrown;
+
+    }
+    .box-4 img{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+
+    .box-5:before{
+        display:inline-block;
+        content:"";
+        vertical-align:middle;
+        height: 100%;
+
+    }
+    .box-5{
+        width: 400px;
+        height: 400px;
+        background-color: sandybrown;
+        text-align:center;
+        font-size:0px;
+    }
+    /*.box-5 img{*/
+        /*vertical-align:middle;*/
+    /*}*/
+    .box-5 div{
+        width: 100px;
+        height: 100px;
+        background: red;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .box-6{
+        width: 400px;
+        height: 400px;
+        background-color:sandybrown;
+    }
+    .box-6-1{
+        /*float: left;*/
+        display: inline-block;
+        position: relative;
+        left:50%;
+        top:50%;
+        font-size: 0px;
+    }
+    .box-6-1 img{
+        position: relative;
+        left: -50%;
+        transform: translateY(-50%);
+    }
+    .box-7{
+        width: 400px;
+        height:400px;
+        /*margin-left: 50%;*/
+        /*transform: translateX(-50%);*/
+        background: red;
+        /*text-align: center;*/
+        /*margin-left: -200px;*/
+        /*position: absolute;*/
+        /*left: 50%;*/
+        position: relative;
+
+    }
+    .box-7-1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+</style>
+<body>
+    <h1>方法1</h1>
+    <div class="box">
+        <img src="2009139447757.jpg" width="100px" height="100px">
+    </div>
+    <h1>方法2</h1>
+    <div class="box-2">
+        <img src="2009139447757.jpg" width="100px" height="100px">
+
+    </div>
+    <h1>方法3</h1>
+    <div class="box-3">
+        <img src="2009139447757.jpg" width="100px" height="100px">
+
+    </div>
+    <h1>方法4</h1>
+    <div class="box-4">
+        <img src="2009139447757.jpg" width="100px" height="100px">
+
+    </div>
+    <h1>方法5</h1>
+    <div class="box-5">
+        <!--<img src="2009139447757.jpg" width="100px" height="100px">-->
+        <div>hello</div>
+    </div>
+
+    <h1>方法6</h1>
+    <div class="box-6">
+        <div class="box-6-1">
+            <img src="2009139447757.jpg" width="100px" height="100px">
+        </div>
+    </div>
+    <h1>方法7</h1>
+    <div class="box-7">
+        <div class="box-7-1">
+            hello.world
+        </div>
+    </div>
+</body>
+</html>
